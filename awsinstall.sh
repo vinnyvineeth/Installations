@@ -29,3 +29,8 @@ else
     # AWS CLI installation failed
     echo "AWS CLI installation failed"
 fi
+sleep 2
+echo "Please provide ACCESS KEY , Secret KEY and Region"
+aws configure
+
+
