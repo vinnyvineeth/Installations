@@ -20,13 +20,12 @@ if [ $? -eq 0 ]; then
     aws --version | grep "aws-cli"
     if [ $? -eq 0 ]; then
         # AWS CLI version found
-        zenity --info --title="Success" --text="AWS CLI is installed successfully"
+        echo "AWS CLI version found: $(aws --version)"
     else
         # AWS CLI version not found
-        zenity --error --title="Error" --text="AWS CLI installation failed"
+        echo "AWS CLI installation failed: Version not found"
     fi
 else
     # AWS CLI installation failed
     echo "AWS CLI installation failed"
-    zenity --error --title="Error" --text="AWS CLI installation failed"
 fi
